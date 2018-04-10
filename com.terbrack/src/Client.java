@@ -29,9 +29,9 @@ public class Client {
         Scanner sc = new Scanner(System.in);
 
         // Get server information
-        System.out.print("Enter IP Address: ");
+        System.out.print("Enter server IP address: ");
         String address = sc.nextLine();
-        System.out.print("Enter port: ");
+        System.out.print("Enter server port: ");
         int port = Integer.parseInt(sc.nextLine());
 
         // Set up server streams
@@ -40,7 +40,7 @@ public class Client {
         PrintWriter serverOut = new PrintWriter(socket.getOutputStream(), true);
 
         // Set up client listener
-        System.out.print("Enter port for client connections to be accepted: ");
+        System.out.print("Enter listener port: ");
         port = Integer.parseInt(sc.nextLine());
         serverSocket = new ServerSocket(port);
         acceptThread.start();

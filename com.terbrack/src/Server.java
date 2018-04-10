@@ -89,6 +89,7 @@ public class Server {
                             out.println(files);
                             break;
                         case "QUIT":
+                            System.out.println("Client disconnected");
                             return;
                     }
                 }
